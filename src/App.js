@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
+import Home from './containers/Home';
+import Header from './components/Header';
 
 const App = () => {
   return (
     <div className="app">
-      <h1>Scarebnb</h1>
-      {/* <img src="https://i.ibb.co/vQCq0b0/Screen-Shot-2021-03-16-at-11-07-50-AM.png" alt="logo"/> */}
+      <Header />
+      <Home />
+        {/* Header */}
+        {/* Banner */}
+        {/* Cards */}
+        {/* <Footer/> */}
+      {/* SearchPage */}
     </div>
   );
 }
