@@ -1,0 +1,45 @@
+.banner {
+    height: 70vh;
+    position: relative;
+    background: url("https://i.ibb.co/Vtd561r/Screen-Shot-2021-03-16-at-1-24-01-PM.png") center right;
+    background-size:90% 100%;
+}
+
+.banner__info {
+    background-color: black;
+    color: white;
+    padding-top: 28vh;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 300px;
+}
+
+.banner__info button {
+    background-color: #f5484b;
+    color: white;
+    text-transform: inherit;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.banner__info h5 {
+    margin-top: 10px;
+}
+
+.banner__info button:hover {
+    background-color: white;
+    color: #f5484b;
+}
+
+.banner__searchButton {
+    background-color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    color: #f5484b !important;
+}
+
+.banner__search {
+    display: flex;
+    flex-direction: column;
+}
