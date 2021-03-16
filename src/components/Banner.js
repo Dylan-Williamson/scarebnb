@@ -1,16 +1,26 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import '../Banner.css';
+import { setShowSearch } from '../features/appSlice';
+import Search from './Search'
 
 const Banner = () => {
+    const dispatch = useDispatch();
+    const showSearch = useSelector(state => state.app.showSearch);
+
     return (
         <div className="banner">
             <div className="banner__search">
+                {showSearch && <Search />}
                 <Button
-                    variant="outline"
+                    onClick={() => dispatch(setShowSearch({
+                        showSearch: !showSearch
+                    }))}
+                    variant="outlined"
                     className="banner__searchButton"
                 >
-                    Search Dates
+                    {showSearch? "Hide" : "Search"}
                 </Button>
             </div>
             <div className="banner__info">
