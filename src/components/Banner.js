@@ -1,12 +1,14 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
 import '../Banner.css';
 import { setShowSearch } from '../features/appSlice';
 import Search from './Search'
 
 const Banner = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const showSearch = useSelector(state => state.app.showSearch);
 
     return (
@@ -30,7 +32,7 @@ const Banner = () => {
                 <h5>
                     Plan a different kind of getaway to unconver the hidden horrors near you.
                 </h5>
-                <Button variant="outlined">
+                <Button onClick={() => history.push('/search')} variant="outlined">
                     Explore Nearby
                 </Button>
             </div>
